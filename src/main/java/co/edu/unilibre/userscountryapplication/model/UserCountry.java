@@ -1,24 +1,24 @@
 package co.edu.unilibre.userscountryapplication.model;
 
 public class UserCountry {
-	private Country country;
-	private User user;
+	private String country;
+	private String user;
 	
-	public UserCountry(Country country, User user) {
+	public UserCountry(String country, String user) {
 		super();
 		this.country = country;
 		this.user = user;
 	}
-	public Country getCountry() {
+	public String getCountry() {
 		return country;
 	}
-	public void setCountry(Country country) {
+	public void setCountry(String country) {
 		this.country = country;
 	}
-	public User getUser() {
+	public String getUser() {
 		return user;
 	}
-	public void setUser(User user) {
+	public void setUser(String user) {
 		this.user = user;
 	} 
 }

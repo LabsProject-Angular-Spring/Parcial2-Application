@@ -27,11 +27,10 @@ public class UserCountryServiceFeign implements UserCountryService{
 		List<User> users = userServiceClientFeign.getList();
 		List<Country> countries = countryServiceClientFeign.getList();
 		List<UserCountry> finallist = new ArrayList<>();
-		for(User user:users) {
-			
+		for(User user:users) {			
 			for(Country c : countries) {
 				if(c.getId() == user.getCountryId()) {
-					UserCountry x = new UserCountry(c,user);
+					UserCountry x = new UserCountry(c.getName(),user.getName());
 					finallist.add(x);
 				}
 			}
